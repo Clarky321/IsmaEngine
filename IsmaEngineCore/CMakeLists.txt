@@ -6,11 +6,37 @@ set(ENGINE_PROJECT_NAME IsmaEngineCore)
 
 # Список публичных заголовочных файлов
 set(ENGINE_PUBLIC_INCLUDES
+	includes/IsmaEngineCore/Graphics/Camera.h
+	includes/IsmaEngineCore/Graphics/CubeBuilder.h
+	includes/IsmaEngineCore/Graphics/CubeSheet.h
+	
+	includes/IsmaEngineCore/Util/ColorShade.h
+	includes/IsmaEngineCore/Util/DistanceNoise.h
+	includes/IsmaEngineCore/Util/MathFunctions.h
+
+	includes/IsmaEngineCore/World/Cube.h
+	includes/IsmaEngineCore/World/CubeChunk.h
+	
+	includes/IsmaEngineCore/Application.h
+	
 	includes/IsmaEngineCore/test.h
 )
 
 # Список приватных исходных файлов
 set(ENGINE_PRIVATE_SOURCES
+	src/IsmaEngineCore/Graphics/Camera.cpp
+	src/IsmaEngineCore/Graphics/CubeBuilder.cpp
+	src/IsmaEngineCore/Graphics/CubeSheet.cpp
+	
+	src/IsmaEngineCore/Util/ColorShade.cpp
+	src/IsmaEngineCore/Util/DistanceNoise.cpp
+	src/IsmaEngineCore/Util/MathFunctions.cpp
+
+	src/IsmaEngineCore/World/Cube.cpp
+	src/IsmaEngineCore/World/CubeChunk.cpp
+
+	src/IsmaEngineCore/Application.cpp
+
 	src/IsmaEngineCore/test.cpp
 )
 

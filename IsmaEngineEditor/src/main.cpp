@@ -1,21 +1,8 @@
-#include <SFML/Graphics.hpp>
+#include <memory>
+#include <IsmaEngineCore\Application.h>
 
-int main()
+int main(int arc, char* argv[])
 {
-    auto window = sf::RenderWindow{ { 1200u, 800u }, "CMake SFML Project" };
-    window.setFramerateLimit(144);
-
-    while (window.isOpen())
-    {
-        for (auto event = sf::Event{}; window.pollEvent(event);)
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
-
-        window.clear();
-        window.display();
-    }
+	auto app = std::make_unique<Application>();
+	app->run();
 }
